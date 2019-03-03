@@ -122,19 +122,8 @@ func main() {
 		}
 	}()
 
-	// type EventKey struct {
-	// 	t   time.Time
-	// 	mod ModMask
-	// 	key Key
-	// 	ch  rune
-	// }
-
-	f, _ := os.Create("./dump.txt")
-	// f.WriteString("test\n")
-	// s := fmt.Sprintf("%v\n", string(e.Rune()))
-	// f.WriteString(s)
-	// f.Sync()
-	// f.WriteString("test")
+	// For debugging, use `tail -f kbdlog`
+	f, _ := os.Create("kbdlog")
 	defer f.Close()
 
 	for {
@@ -158,17 +147,18 @@ func main() {
 					insertChar(e.Rune())
 				}
 
-				f.WriteString(fmt.Sprintf("%v\n", e.Rune()))
-				f.WriteString(fmt.Sprintf("%v\n", e))
-				f.Sync()
-				event = nil
-			default:
-				f.WriteString("default\n")
-				f.WriteString(fmt.Sprintf("%v\n", e))
+				f.WriteString(formatEventKey(e))
 				f.Sync()
 				event = nil
 			}
 		}
 	}
+}
 
+func formatEventKey(e *tcell.EventKey) string {
+	mod := e.Modifiers()
+	key := e.Key()
+	rune := e.Rune()
+
+	return fmt.Sprintf("{mod: %v, key: %v, rune: %v}\n", mod, key, rune)
 }
