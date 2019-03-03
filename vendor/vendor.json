@@ -1,0 +1,55 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "BzGGZAxs0O4rEua6IPUzTZQ9t9Y=",
+			"path": "github.com/gdamore/encoding",
+			"revision": "6289cdc94c00ac4aa177771c5fce7af2f96b626d",
+			"revisionTime": "2018-12-19T00:57:38Z"
+		},
+		{
+			"checksumSHA1": "YkAEXdZS6rJpLwFkvirkclWEcgM=",
+			"path": "github.com/gdamore/tcell",
+			"revision": "aaadc574a6ed8dc3abe56036ca130dcee1ee6b6e",
+			"revisionTime": "2018-12-18T17:44:59Z"
+		},
+		{
+			"checksumSHA1": "1K6HPj8kEKQRz+vbvSef16sSzcU=",
+			"path": "github.com/gdamore/tcell/terminfo",
+			"revision": "aaadc574a6ed8dc3abe56036ca130dcee1ee6b6e",
+			"revisionTime": "2018-12-18T17:44:59Z"
+		},
+		{
+			"checksumSHA1": "COd+6lqzgbdwr5Y2hs5dgwSlaf0=",
+			"path": "github.com/lucasb-eyer/go-colorful",
+			"revision": "12d3b2882a08d1abc9488e34f3e1ae35165f2d07",
+			"revisionTime": "2018-10-28T22:34:41Z"
+		},
+		{
+			"checksumSHA1": "qR7D38Zmn9TPUvGn64k+r0+Kq1c=",
+			"path": "github.com/mattn/go-runewidth",
+			"revision": "703b5e6b11ae25aeb2af9ebb5d5fdf8fa2575211",
+			"revisionTime": "2018-12-18T00:06:49Z"
+		},
+		{
+			"checksumSHA1": "tqqo7DEeFCclb58XbN44WwdpWww=",
+			"path": "golang.org/x/text/encoding",
+			"revision": "d14c52b222ee852cdba8b07206ca0c614b389876",
+			"revisionTime": "2019-02-21T13:47:49Z"
+		},
+		{
+			"checksumSHA1": "+bFlIgTuq1Rf8QVtiEGWeCJEnpY=",
+			"path": "golang.org/x/text/encoding/internal/identifier",
+			"revision": "d14c52b222ee852cdba8b07206ca0c614b389876",
+			"revisionTime": "2019-02-21T13:47:49Z"
+		},
+		{
+			"checksumSHA1": "o3YChxWLvyCmkAn/ZNBj9HC9zKw=",
+			"path": "golang.org/x/text/transform",
+			"revision": "d14c52b222ee852cdba8b07206ca0c614b389876",
+			"revisionTime": "2019-02-21T13:47:49Z"
+		}
+	],
+	"rootPath": "github.com/limabeans/typewriter"
+}
