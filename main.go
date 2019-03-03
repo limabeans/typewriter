@@ -135,7 +135,11 @@ func main() {
 			switch e := event.(type) {
 
 			case *tcell.EventKey:
-				if e.Key() == tcell.KeyLeft {
+				if e.Modifiers() == 2 && e.Rune() == 17 {
+					// TODO: Look into defer, because I still need to call Fini() here before exiting.
+					screen.Fini()
+					os.Exit(0)
+				} else if e.Key() == tcell.KeyLeft {
 					arrowLeft()
 				} else if e.Key() == tcell.KeyRight {
 					arrowRight()
