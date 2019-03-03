@@ -139,13 +139,13 @@ func main() {
 					// TODO: Look into defer, because I still need to call Fini() here before exiting.
 					screen.Fini()
 					os.Exit(0)
-				} else if e.Key() == tcell.KeyLeft {
+				} else if e.Key() == tcell.KeyLeft || (e.Modifiers() == 2 && e.Rune() == 2) {
 					arrowLeft()
-				} else if e.Key() == tcell.KeyRight {
+				} else if e.Key() == tcell.KeyRight || (e.Modifiers() == 2 && e.Rune() == 6) {
 					arrowRight()
-				} else if e.Key() == tcell.KeyUp {
+				} else if e.Key() == tcell.KeyUp || (e.Modifiers() == 2 && e.Rune() == 16) {
 					arrowUp()
-				} else if e.Key() == tcell.KeyDown {
+				} else if e.Key() == tcell.KeyDown || (e.Modifiers() == 2 && e.Rune() == 14) {
 					arrowDown()
 				} else {
 					insertChar(e.Rune())
