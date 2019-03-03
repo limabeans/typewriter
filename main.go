@@ -93,6 +93,7 @@ func main() {
 	var err error
 	// init tcell screen
 	screen, err = tcell.NewScreen()
+	defer screen.Fini()
 	if err != nil {
 		os.Exit(1)
 	}
@@ -170,5 +171,4 @@ func main() {
 		}
 	}
 
-	screen.Fini()
 }
