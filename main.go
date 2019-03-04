@@ -28,6 +28,9 @@ func ResetScreen() {
 
 func RefreshScreen() {
 
+	f.WriteString("RefreshScreen\n")
+	f.Sync()
+
 	w, h := screen.Size()
 	col := cur % w
 	row := cur / w
