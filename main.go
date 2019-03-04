@@ -13,6 +13,7 @@ var (
 	defStyle tcell.Style
 	cur      int
 	buffer   []rune
+	f        *os.File
 )
 
 func ResetScreen() {
@@ -123,7 +124,7 @@ func main() {
 	}()
 
 	// For debugging, use `tail -f kbdlog`
-	f, _ := os.Create("kbdlog")
+	f, _ = os.Create("kbdlog")
 	defer f.Close()
 
 	for {
